@@ -1,0 +1,308 @@
+.icon-error {
+  background:url("../../img/home/error.png") center left no-repeat; width:30px; height:30px; margin-left: 40%;
+}
+.icon-success {
+  background:url("../../img/home/success.png") center left no-repeat; width:30px; height:30px; margin-left: 40%;
+}
+
+.global-toast-box{
+    width: 4rem;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    position: absolute;
+    top:30%;
+    left:50%;
+    text-align:center;
+    padding: 0.5rem 0.2rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform:translateX(-50%);
+    transform:translateX(-50%);
+}
+.global-toast-box>p{
+    font-size:0.4rem;
+    line-height: 0.8rem;
+}
+
+/*鏄熸槦*/
+.product_xing {
+  font-size: 0;
+  height: .3rem;
+  line-height: .3rem;
+  padding-top: .05rem;
+  display: block;
+}
+.product_xing b {
+  display: none;
+}
+.product_xing i {
+  display: inline-block;
+  font-size: 0;
+  width: .24rem;
+  height: .24rem;
+  margin-right: .05rem;
+  background: url("../../img/home/%E6%98%9F-%E5%A4%A72.png") no-repeat;
+  background-size: 100% 100%;
+}
+.product_xing em {
+  font-size: .2rem;
+  color: #808080;
+  float: right;
+  padding-right: .3rem;
+}
+/*閬僵灞�*/
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  display: none;
+}
+.cover .popup {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  border-radius: .15rem;
+  color: white;
+  font-size: .26rem;
+  padding: 8px 12px;
+}
+
+.terrace_list {
+    width: 100%;
+    height: 1.8rem;
+    background: white;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.terrace_list dt {
+    width: 1.7rem;
+    height: 1.8rem;
+    float: left;
+}
+
+.terrace_list dt div {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    margin: .3rem .2rem 0 .3rem;
+}
+
+.terrace_list dt div img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8%;
+}
+
+.terrace_list dd {
+    width: 4.6rem;
+    float: left;
+    font-size: .3rem;
+    color: #4d4d4d;
+}
+
+.terrace_list dd h3 {
+    line-height: .6rem;
+    padding-top: .1rem;
+    font-size: .3rem;
+}
+
+.terrace_list dd h3 span {
+    display: inline-block;
+    position: relative;
+    top: .1rem;
+    margin-right: .2rem;
+    width: .9rem;
+    height: .4rem;
+    background: url("../../img/home/xinshangxian@3x.png");
+    background-size: 100% 100%;
+}
+
+.terrace_list dd h3 b {
+    color: #F33E3E;
+}
+
+.terrace_list dd .p2 {
+    color: #999;
+    font-size: .24rem;
+    line-height: .4rem;
+}
+
+.terrace_list dd h3,
+.terrace_list dd .p2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+/*------------------浜у搧鍒楄〃鍙充笂瑙掓坊鍔犲浘鏍�----------------*/
+dl.terrace_list .rightIcon {
+  position: absolute;
+  width: .8rem;
+  height: .7rem;
+  top: 0;
+  right: .12rem;
+}
+.scroll dl.terrace_list:nth-of-type(1) .rightIcon {
+  background: url('../../img/product_top1@3x.png') no-repeat;
+  background-size: 100% 100%;
+}
+.scroll dl.terrace_list:nth-of-type(2) .rightIcon {
+  background: url('../../img/product_top2@3x.png') no-repeat;
+  background-size: 100% 100%;
+}
+.scroll dl.terrace_list:nth-of-type(3) .rightIcon {
+  background: url('../../img/product_top3@3x.png') no-repeat;
+  background-size: 100% 100%;
+}
+
+dl.terrace_list .icoapply {
+  position: absolute;
+  width: 1.2rem;
+  height: .3rem;
+  bottom: 0;
+  right: 0;
+  background: url('../../img/apply@2x.png') no-repeat;
+  background-size: auto 100%;
+  background-position:right bottom;
+}
+
+
+
+
+/*涓婃媺璺宠浆閫熻捶澶у叏*/
+.scroller-pullDown,
+.scroller-pullUp {
+    width: 100%;
+    text-align: center;
+    font-size: .26rem;
+    line-height: 40px;
+    height: 40px;
+}
+
+.scroller-pullDown {
+    position: absolute;
+    top: -40px;
+    left: 0;
+}
+
+.scroller-pullDown img {
+    width: .4rem;
+    height: .4rem;
+    position: relative;
+    top: .1rem;
+}
+
+.scroller-pullUp .pullUpImg {
+    width: 100%;
+    height: 2.8rem;
+    position: relative;
+}
+
+.scroller-pullUp .pullUpImg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.iScrollIndicator {
+    color: #44b7f7;
+    opacity: .3;
+}
+
+
+
+/*褰╄壊鏍囩*/
+.p1 {
+  height: .6rem;
+  overflow: hidden;
+  border: 1px solid white;
+  display: block;
+}
+.p1 span {
+  font-size: .2rem;
+  margin-right: .11rem;
+  margin-top: .08rem;
+  width: 1rem;
+  height: .35rem;
+  line-height: .34rem;
+  display: inline-block;
+  border-radius: .2rem;
+  float: left;
+  text-align: center;
+  border: 1px solid;
+  overflow: hidden;
+}
+.tag-blue{
+    color:#0099cc;border-color:#0099cc;background:#fff;
+}
+.tag-orange{
+    color:#f19f60;border-color:#ef8840;background:#fff;
+}
+.tag-yellow{
+    color:#b39833;border-color:#e3ce84;background:#fff;
+}
+.tag-red{
+    color:#e25a5a;border-color:#f5c2c3;background:#fff;
+}
+.tag-red-light{
+    color: rgb(226, 90, 90); border-color: rgb(245, 194, 195); background: rgb(251, 232, 232);
+}
+
+.pro-desc{
+    overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical
+}
+.themes_box .card_title{
+    text-align:center;height:.75rem;line-height:.35rem;position:relative;
+}
+.themes_box .card_title:before{
+    content:'';position:absolute;top:.4rem;left:.1rem;right:.1rem;height:1px;background:#f2f2f2;
+}
+.themes_box .card_title>span{
+    position:relative;display:inline-block;background:#fff;font-size:.24rem;padding:0 .2rem;
+}
+.txt-orange{
+    color:#f1861d;
+}
+.nonedata-wrap{
+  margin-top:5rem;
+}
+.nonedata{
+  width:6rem;font-size:.36rem;text-align:center;margin:0 auto;
+}
+.nonedata .icon{
+  width:1.5rem;height:1.5rem;background-repeat:no-repeat;background-position:0 0;-webkit-background-size:100% auto;background-size:100% auto;margin:0 auto;margin-bottom:10px;
+}
+.nonedata .icon.icon-yen{
+  background-image:url('../../img/ico_yen_bag.png');
+}
+
+.none404-wrap{
+  margin-top:3rem;
+}
+.none404{
+  width:6rem;font-size:.36rem;text-align:center;margin:0 auto;
+}
+.none404 .icon{
+  width:3rem;height:3rem;background-repeat:no-repeat;background-position:0 0;-webkit-background-size:100% auto;background-size:100% auto;margin:0 auto;margin-bottom:10px;
+}
+.none404 h3{
+  font-size:0.4rem;
+}
+.none404-btnbar{
+  margin-top:.5rem;
+}
+.none404-btnbar .btn{
+  display:inline-block;
+}
+.none404 .icon.icon-bear{
+  background-image:url('../../img/none@3x.png');
+}

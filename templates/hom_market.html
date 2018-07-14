@@ -1,0 +1,179 @@
+{{template "hom_header"}}
+<body>
+<div class="container">
+    <link rel="stylesheet" href="statics/css/home/product.css">
+    <div class="product_main" id="wrapper" style="overflow:hidden">
+        <div class="warpper">
+
+            <div id="PullDown" class="scroller-pullDown">
+                <img src="/statics/img/home/rolling.svg" />&nbsp;&nbsp;<span id="pullDown-msg" class="pull-down-msg">下拉刷新</span>
+            </div>
+            <!-- 产品筛选 开始-->
+            <div class="product_head">
+                <div class="product_head_btm">
+                    <span class="money"><em>金额不限</em><i></i></span>
+                    <span class="loanType"><em>个性选择</em><i></i></span>
+                </div>
+            </div>
+            <!-- 产品筛选 结束-->
+
+            <!-- 产品列表 开始-->
+            <div class="scroll" id="prolist">
+            {{range .products }}
+                <dl class="terrace_list" >
+                    <a href="{{ .Url }}"  data-action="214|Button46-1">
+                        <dt>
+                            <div><img src="statics/img/loan/{{ .Logo }}"></div>
+                        </dt>
+                    </a>
+                    <a href="{{ .Url }}"  data-action="214|Button46-2">
+                        <dd>
+                            <h3><b>{{ .Name }}</b> </h3>
+                            <p class="p1 terrace_list_p1">
+                                额度：{{.AmountMax}}元  期限：{{.Period}}
+                            </p>
+                            <p class="p2">{{ .Advantage }}</p>
+                        </dd>
+                    </a>
+                </dl>
+            {{end}}
+            </div>
+            <input type='hidden' id="sc" value=""/>
+            <input type='hidden' id="screen" value=""/>
+            <!-- 产品列表 结束-->
+
+            <!-- 上拉加载 开始-->
+            <div id="PullUp" class="scroller-pullUp">
+                <a href="javascript:void(0)" onclick="jiazai()"><p>点击加载更多</p> </a>
+            </div>
+            <!-- 上拉加载 结束-->
+        </div>
+    </div>
+    <input type="hidden" value="0" id='ios_uid'/>
+
+
+    <style>
+        .no_pro_img{height:11.5rem;background:url("/static/dist/no_pro.png") no-repeat center center;}
+    </style>
+
+    <!-- 筛选弹出框 开始 -->
+    <div class="cover_top" style="display: none;">
+        <div class="moneyCover" id="wrapper2" style="top: -365px;">
+            <ul>
+                <li class="moneyCoverClick">金额不限</li>
+                <li>500元</li>
+                <li>1000元</li>
+                <li>1500元</li>
+                <li>2000元</li>
+                <li>3000元</li>
+                <li>4000元</li>
+                <li>5000元</li>
+                <li>6000元</li>
+                <li>7000元</li>
+                <li>8000元</li>
+                <li>9000元</li>
+                <li>10000元</li>
+                <li>15000元</li>
+                <li>20000元</li>
+                <li>30000元</li>
+                <li>50000元</li>
+                <li>10万元</li>
+                <li>20万元</li>
+            </ul>
+        </div>
+        <div class="loanTypeCover" style="top: -365px;">
+            <div class="loanTypeCoverContent">
+                <h3>我是</h3>
+                <div class="indentBox">
+                    <span id="indent0" data-id="0" style="display:none" class="">身份不限</span><span id="indent2" data-id="2">上班族</span><span id="indent1" data-id="1">学生党</span> <span id="indent3" data-id="3">生意人</span> <span id="indent4" data-id="4">自由职业</span> </div>
+                <h3>我有</h3>
+                <div class="have"><span id="5">信用卡</span><span id="6">身份证</span><span id="8">公积金</span><span id="11">人行征信</span><span id="33">学信</span><span id="34">芝麻信用</span><span id="45">淘宝京东</span></div>
+                <h3>我要</h3>
+                <div class="need"><span id="41">一次还清</span><span id="42">分期还款</span><span id="44">还信用卡</span></div>
+            </div>
+            <div class="button">
+                <button class="resetBtn">重置</button>
+                <button class="sureBtn">确认</button>
+            </div>
+        </div>
+    </div>
+    <!-- 筛选弹出框 结束 -->
+
+    <!-- 底部 开始 -->
+    <footer class="product_foot">
+        <dl>
+            <a href="/" data-action="|Button1"><dt></dt>
+                <dd>首页</dd>
+            </a>
+        </dl>
+        <dl>
+            <a href="/market" data-action="|Button2"><dt></dt>
+                <dd>新口子</dd>
+            </a>
+        </dl>
+        <!--
+        <dl>
+            <a href="/me" data-action="|Button3"><dt></dt>
+                <dd>我的</dd>
+            </a>
+        </dl>
+        -->
+    </footer>
+    <!-- 底部 结束 -->
+</div>
+<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?85f45c25ffb6d499e777c3cc44c0a174";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+
+</script>
+
+
+</body>
+</html>
+<script type="text/javascript" src="https://s.moneyzhanggui.com/dist/js/1.0.6/product.js"></script>
+<script type="text/javascript">
+    $('.product_head_btm>span').on('click', function(){
+        var id = $(this).index();
+        if($(this).hasClass('topClick')){
+            $(this).removeClass('topClick');
+            $('.cover_top').hide().children().eq(id).css({'top':'-365px'});
+        } else {
+            $(this).addClass('topClick').siblings().removeClass('topClick');
+            $('.cover_top').show(0, function(){
+                $('.cover_top').children().eq(id).stop(true,true).animate({'top':0}, 300).siblings().css({'top':'-365px'});
+            })
+        }
+    });
+
+    $('.moneyCover>ul>li').on('click', function(){
+        $(this).addClass('moneyCoverClick').siblings().removeClass('moneyCoverClick');
+        $('.product_head_btm>.money').removeClass('topClick').children('em').text($(this).text());
+        $('.cover_top').hide().children().css({'top':'-365px'});
+        seachProds($(this).text());
+    });
+
+    $('.loanTypeCover span').on('click', function(){
+        $(this).toggleClass('loanTypeCoverClick');
+    });
+    $('.loanTypeCover .resetBtn').on('click', function(){
+        $('.loanTypeCover  span').removeClass('loanTypeCoverClick');
+    });
+    $('.loanTypeCover .sureBtn').on('click', function(){
+        $('.cover_top').hide().children().css({'top':'-365px'});
+        $('.product_head_btm>.loanType').removeClass('topClick');
+        var attrTag=[];
+        $(".loanTypeCoverClick").each(function(){
+            attrTag.push($(this).text());
+        });
+        seachProdsStyle(attrTag.join(","));
+    });
+
+
+
+
+</script>

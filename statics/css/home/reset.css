@@ -1,0 +1,262 @@
+@charset "utf-8";
+body,
+ul,
+ol,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+td,
+th,
+input,
+select,
+textarea,
+form {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    border: none;
+}
+
+input[type="radio"],
+input[type="text"],
+input[type="checkbox"],
+input[type="button"],
+input[type="password"],
+input[type="reset"],
+input[type="submit"],
+input[type="number"],
+input[type="tel"],
+select,
+textarea,
+button,
+a {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+textarea {
+    resize: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+em {
+    font-style: normal;
+}
+
+
+/*浮动*/
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/*盒子内边框自适应*/
+
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "微软雅黑";
+}
+
+
+/*取消input,button,select默认样式*/
+
+input,
+button,
+select {
+    -webkit-appearance: none;
+}
+
+a {
+    color: #000;
+}
+
+b {
+    font-weight: 400;
+}
+
+i {
+    font-style: normal;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /*取消移动端点击瞬间背景*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: #4d4d4d;
+    font-size: 47px;
+}
+
+.container {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    background: #F5F5F5;
+    position: relative;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+/*渐变背景*/
+
+.gradient {
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(left, #02ecfd, #44b7f7);
+    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(linear, left, from(#02ecfd), to(#44b7f7));
+    /* Safari 5.1+, Chrome 10+ */
+    background: -webkit-linear-gradient(left, #02ecfd, #44b7f7);
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(left, #02ecfd, #44b7f7);
+    /* default */
+    background: linear-gradient(to right, #02ecfd, #44b7f7);
+    background-color: #44b7f7;
+}
+
+header {
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(left, #02ecfd, #44b7f7);
+    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(linear, left, from(#02ecfd), to(#44b7f7));
+    /* Safari 5.1+, Chrome 10+ */
+    background: -webkit-linear-gradient(left, #02ecfd, #44b7f7);
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(left, #02ecfd, #44b7f7);
+    /* default */
+    background: linear-gradient(to right, #02ecfd, #44b7f7);
+    background-color: #44b7f7;
+}
+
+.backBtn {
+    width: .9rem;
+    height: .9rem;
+    background: url("../img/%E7%AE%AD%E5%A4%B4.png") no-repeat center center;
+    background-size: .16rem .29rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/*底部下载弹窗*/
+
+.downloadCover {
+    display: none;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 0;
+}
+
+.coverBtn {
+    position: absolute;
+    top: -0.15rem;
+    right: 0;
+    width: .3rem;
+    height: .3rem;
+}
+
+
+/*loading Img*/
+
+.landingCover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+}
+
+.landingCover>div {
+    width: 1.6rem;
+    height: 1.6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -.8rem;
+    margin-top: -.8rem;
+    background: rgba(0, 0, 0, .2);
+    border-radius: .1rem;
+}
+
+.landin {
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    margin: .3rem auto;
+}
+::-webkit-input-placeholder {
+color: #ddd;
+}
+:-moz-placeholder {
+color: #ddd;
+}
+::-moz-placeholder {
+color: #ddd;
+}
+:-ms-input-placeholder {
+color: #ddd;
+} 

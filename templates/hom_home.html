@@ -1,0 +1,102 @@
+
+{{ template "hom_header" }}
+<body>
+<div class="container">
+    <link rel="stylesheet" href="statics/css/home/index.css">
+    <script type="text/javascript" src="statics/js/home/jquery.marquee.min.js"></script>
+    <style>
+        .index_main #lunbo .swiper-pagination{bottom:8px;}
+    </style>
+    <div class="index_main scroller" id="wrapper">
+        <div id="thelist">
+            <div id="PullDown" class="scroller-pullDown">
+                <img src="statics/img/home/rolling.svg" />&nbsp;&nbsp;<span id="pullDown-msg" class="pull-down-msg">下拉刷新</span>
+            </div>
+
+            <!-- 头部banner 开始 -->
+            <div class="swiper-container" id="lunbo">
+                <div class="swiper-wrapper banner">
+                {{ range .banners }}
+                    <div class="swiper-slide">
+                        <a target="_blank" href="{{ .Url }}"><img src="statics/img/banners/{{ .ImgName }}" data-action="|Button29" /></a>
+                    </div>
+                {{ end }}
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+            </div>
+            <!-- 头部banner 结束 -->
+
+            <!-- 贷款推荐 开始-->
+            <h3 class="themes_h3">贷款推荐</h3>
+            <div class="new_terrace" id="prolist">
+
+            {{range .products }}
+                <dl class="terrace_list" >
+                    <a href="{{ .Url }}"  data-action="214|Button46-1">
+                        <dt>
+                            <div><img src="statics/img/loan/{{ .Logo }}"></div>
+                        </dt>
+                    </a>
+                    <a href="{{ .Url }}"  data-action="214|Button46-2">
+                        <dd>
+                            <h3><b>{{ .Name }}</b> </h3>
+                            <p class="p1 terrace_list_p1">
+                                额度：{{.AmountMax}}元&nbsp&nbsp&nbsp期限：{{.Period}}
+                            </p>
+                            <p class="p2">{{ .Advantage }}</p>
+                        </dd>
+                    </a>
+                </dl>
+            {{end}}
+
+            </div>
+            <!-- 贷款推荐 结束-->
+
+            <!-- 上拉加载 开始-->
+            <div id="PullUp" class="scroller-pullUp">
+                <a href="javascript:void(0)" onclick="jiazai()"><p>点击加载更多</p> </a>
+            </div>
+            </br>
+            <!-- 上拉加载 结束-->
+        </div>
+    </div>
+
+    <!-- 底部 开始 -->
+    <footer class="index_foot">
+        <dl>
+            <a href="/" data-action="|Button1"><dt></dt>
+                <dd>首页</dd>
+            </a>
+        </dl>
+        <dl>
+            <a href="/market" data-action="|Button2"><dt></dt>
+                <dd>新口子</dd>
+            </a>
+        </dl>
+        <!--
+        <dl>
+            <a href="/" data-action="|Button3"><dt></dt>
+                <dd>我的</dd>
+            </a>
+        </dl>
+        -->
+    </footer>
+    <!-- 底部 结束 -->
+</div>
+
+
+</body>
+</html>
+
+<script type="text/javascript" src="statics/js/home/index.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.marquee').marquee({
+            duration: 8000,
+            gap: 150,
+            duplicated: true
+        });
+    });
+</script>
